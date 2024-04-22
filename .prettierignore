@@ -1,0 +1,10 @@
+## directories to ignore
+node_modules
+dist
+
+## file extensions to ignore
+*.md
+
+## files to ignore
+package-lock.json
+package.json
