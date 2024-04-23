@@ -37,7 +37,8 @@
     "nyc": "15.1.0",
     "prettier": "3.2.5",
     "rewire": "7.0.0",
-    "sinon": "17.0.1"
+    "sinon": "17.0.1",
+    "typescript": "5.4.5"
   },
   "scripts": {
     "lint": "eslint .",
