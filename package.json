@@ -1,13 +1,13 @@
 {
-  "name": "rate-limit-mongo",
-  "description": "Provides a Mongo store for the express-rate-limit  middleware.",
-  "version": "2.3.2",
-  "author": "2do2go team <dev.2do2go@gmail.com>",
-  "license": "MIT",
-  "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:2do2go/rate-limit-mongo.git"
+  "name": "mongo-rate-limit-store",
+  "version": "0.0.1",
+  "description": "Provides a Mongo store for the express-rate-limit middleware.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --bail --timeout 10000 --recursive",
+    "makeCodeCoverageDetailReport": "nyc --all --exclude migrations --exclude coverage --exclude test --reporter lcov --reporter html  npm test -- --reporter dot && echo \"*** Code coverage report done, checkout ./coverage dir\"",
+    "makeCodeCoverageSummaryReport": "nyc --all --exclude migrations --exclude coverage --exclude test --reporter text-summary npm test -- --reporter dot"
   },
   "keywords": [
     "express-rate-limit",
@@ -25,14 +25,16 @@
     "mongo",
     "mongodb"
   ],
+  "types": "./dist/index.d.ts",
   "dependencies": {
-    "mongodb": "^3.6.7",
+    "mongodb": "6.5.0",
     "twostep": "0.4.2",
     "underscore": "1.12.1"
   },
   "devDependencies": {
     "eslint": "8.57.0",
     "expect.js": "0.3.1",
+    "express-rate-limit": "7",
     "mocha": "10.4.0",
     "nyc": "15.1.0",
     "prettier": "3.2.5",
@@ -40,10 +42,16 @@
     "sinon": "17.0.1",
     "typescript": "5.4.5"
   },
-  "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec --bail --timeout 10000 --recursive",
-    "makeCodeCoverageDetailReport": "nyc --all --exclude migrations --exclude coverage --exclude test --reporter lcov --reporter html  npm test -- --reporter dot && echo \"*** Code coverage report done, checkout ./coverage dir\"",
-    "makeCodeCoverageSummaryReport": "nyc --all --exclude migrations --exclude coverage --exclude test --reporter text-summary npm test -- --reporter dot"
+  "peerDependencies": {
+    "express-rate-limit": ">= 6"
+  },
+  "author": "Mert Şişmanoğlu <mertssmnoglu@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mertssmnoglu/mongo-rate-limit-store.git"
+  },
+  "engines": {
+    "node": ">=16.20.1"
   }
 }
