@@ -27,9 +27,7 @@
   ],
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "mongodb": "6.5.0",
-    "twostep": "0.4.2",
-    "underscore": "1.12.1"
+    "mongodb": "6.5.0"
   },
   "devDependencies": {
     "eslint": "8.57.0",
