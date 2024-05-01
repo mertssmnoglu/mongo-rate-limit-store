@@ -11,3 +11,4 @@ docs
 .prettierignore
 .prettierrc.json
 lib
+node_modules
