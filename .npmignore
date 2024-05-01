@@ -3,7 +3,11 @@ test/
 coverage/
 .npmignore
 .github/
-.jshintrc
-.jshintignore
+.eslintignore
+.eslintrc.json
 .npmrc
-
+tsconfig.json
+docs
+.prettierignore
+.prettierrc.json
+lib
