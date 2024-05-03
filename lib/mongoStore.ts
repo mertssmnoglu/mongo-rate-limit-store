@@ -123,18 +123,15 @@ class MongoStore implements Store {
    * @returns ClientRateLimitInfo object or undefined if the key is not found.
    */
   async get(key: string): Promise<ClientRateLimitInfo | undefined> {
-    try {
-      const data = await this._collection.findOne({ key: this.prefixKey(key) })
-      if (!data) {
-        throw new Error('Data not found')
-      }
+    const data = await this._collection.findOne({ key: this.prefixKey(key) })
 
-      return {
-        resetTime: new Date(data?.resetTime),
-        totalHits: data?.totalHits,
-      }
-    } catch (error) {
-      throw new Error('Failed to get data')
+    if (!data) {
+      return undefined
+    }
+
+    return {
+      resetTime: new Date(data.resetTime),
+      totalHits: data.totalHits,
     }
   }
 
