@@ -1,0 +1,10 @@
+{
+  "reporter": ["lcov"],
+  "all": true,
+  "check-coverage": true,
+  "branches": 50,
+  "lines": 50,
+  "functions": 50,
+  "statements": 50,
+  "exclude": ["dist/", "coverage/", "docs", ".nyc_output/", "test/"]
+}
