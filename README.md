@@ -33,7 +33,7 @@ app.use(limiter)
 
 ## Implementation
 
-MongoStore class is suitable with the express-rate-limit's `Store` class. You can check the offical documentation about creating custom stores for express-rate-limit from [here](https://express-rate-limit.mintlify.app/guides/creating-a-store).
+MongoStore class is suitable with the express-rate-limit's `Store` interface. You can check the offical documentation about creating custom stores for express-rate-limit from [here](https://express-rate-limit.mintlify.app/guides/creating-a-store).
 
 ## License
 
