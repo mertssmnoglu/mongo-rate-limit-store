@@ -1,6 +1,6 @@
 {
   "name": "mongo-rate-limit-store",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Provides a Mongo store for the express-rate-limit middleware.",
   "main": "dist/index.js",
   "scripts": {
