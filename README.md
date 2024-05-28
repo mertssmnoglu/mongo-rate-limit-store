@@ -42,7 +42,7 @@ MongoStore class is suitable with the express-rate-limit's `Store` interface. Yo
 
 ## License
 
-MIT Lisence
+[MIT License](./LICENSE)
 
 <!-- References -->
 
