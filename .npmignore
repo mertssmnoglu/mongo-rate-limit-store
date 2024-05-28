@@ -1,14 +1,25 @@
+# Test Related
 test/
 .nyc_output/
 coverage/
-.npmignore
+
+# CI/CD Related
 .github/
-.eslintignore
-.eslintrc.json
-.npmrc
-tsconfig.json
+
+# Documentation
 docs
-.prettierignore
-.prettierrc.json
+
+# Build, Development Related
+tsconfig.json
 lib
 node_modules
+
+# DotFiles
+.npmignore
+.eslintignore
+.eslintrc.json
+.prettierignore
+.prettierrc.json
+.mocharc.json
+.nycrc.json
+.npmrc
