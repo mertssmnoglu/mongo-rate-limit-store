@@ -46,7 +46,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mertssmnoglu/mongo-rate-limit-store.git"
+    "url": "git+ssh://git@github.com/mertssmnoglu/mongo-rate-limit-store.git"
   },
   "engines": {
     "node": ">=16.20.1"
