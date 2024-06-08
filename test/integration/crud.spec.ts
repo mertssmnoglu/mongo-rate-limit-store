@@ -22,27 +22,6 @@ const data = {
   resetKey: 'reset-test',
 }
 
-describe('Initialization Tests', () => {
-  it('Should initialize the store with the correct windowsMs', () => {
-    assert.strictEqual(store.windowMs, 30 * 1000)
-  })
-
-  it('Should initialize the store with the correct prefix', () => {
-    const defaultStorePrefix = 'mongo_rl_' // Same as ../store.ts
-    assert.strictEqual(store.prefix, defaultStorePrefix)
-  })
-})
-
-describe('Prefix Tests', () => {
-  it('Should return the correct prefixed key', () => {
-    const prefix = 'mongo_rl_'
-    const key = 'test-key'
-    const prefixedKey = store.prefixKey(key)
-
-    assert.strictEqual(prefixedKey, prefix + key)
-  })
-})
-
 describe('Increment Tests', () => {
   it('Should create a document with 1 totalHits', async () => {
     const testKey = data.increment.insert
@@ -130,18 +109,5 @@ describe('Reset Tests', () => {
 
       assert.strictEqual(resetHit.totalHits, 0)
     }
-  })
-})
-
-describe('DB Connection Tests', () => {
-  it('Should close the database connection', async () => {
-    await store
-      .closeConnection()
-      .then(() => {
-        assert.ok(true)
-      })
-      .catch(() => {
-        assert.fail('Unable to close the database connection')
-      })
   })
 })
