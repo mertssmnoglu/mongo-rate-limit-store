@@ -4,9 +4,14 @@
   "description": "Provides a Mongo store for the express-rate-limit middleware.",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "lint": "eslint .",
     "test": "mocha test/**/*spec.ts",
-    "coverage": "nyc npm test"
+    "test:unit": "mocha test/unit/*spec.ts",
+    "test:integration": "mocha test/integration/*spec.ts",
+    "coverage": "nyc npm test",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
   },
   "keywords": [
     "express-rate-limit",
